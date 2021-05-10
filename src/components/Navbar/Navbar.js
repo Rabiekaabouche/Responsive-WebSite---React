@@ -25,7 +25,7 @@ function Navbar() {
 	};
 	return (
 		<>
-			<IconContext.Provider value={{ color: "#fff" }}>
+			<IconContext.Provider value={{ color: "#fff", size: 50 }}>
 				<Nav>
 					<NavContainer>
 						<NavLogo to="/" onClick={closeMenu}>
@@ -40,16 +40,18 @@ function Navbar() {
 								<NavLink to="/">Home</NavLink>
 							</NavItem>
 							<NavItem onClick={handleClick}>
-								<NavLink to="/">About</NavLink>
+								<NavLink to="/products">Products</NavLink>
 							</NavItem>
 							<NavItem onClick={handleClick}>
-								<NavLink to="/">Services</NavLink>
+								<NavLink to="/Services">Services</NavLink>
 							</NavItem>
 							<NavItem onClick={handleClick}>
-								<NavLink to="/">Contact</NavLink>
+								<NavLink to="/sign-up">Contact</NavLink>
 							</NavItem>
 							<NavButton onClick={handleClick}>
-								<NavBtnLink primary>SIGN-UP</NavBtnLink>
+								<NavBtnLink to="/sign-up" primary>
+									SIGN-UP
+								</NavBtnLink>
 							</NavButton>
 						</NavMenu>
 					</NavContainer>

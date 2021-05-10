@@ -1,10 +1,9 @@
 import React from "react";
 import { InfoSection, Pricing } from "../../components";
-import { homeObjOne, homeObjTwo, homeObjThree } from "./Data";
-function Home() {
+import { homeObjTwo, homeObjThree } from "./Data";
+function Products() {
 	return (
 		<>
-			<InfoSection {...homeObjOne} />
 			<InfoSection {...homeObjTwo} />
 			<Pricing />
 			<InfoSection {...homeObjThree} />
@@ -12,4 +11,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default Products;

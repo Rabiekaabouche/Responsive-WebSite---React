@@ -1,11 +1,57 @@
 import React from "react";
-import { InfoSec } from "./InfoSection-Elements";
+import { Container, Button } from "../../GlobalStyles";
+import { Link } from "react-router-dom";
+import {
+	InfoSec,
+	InfoRow,
+	InfoColumn,
+	TextWrapper,
+	TopLine,
+	Heading,
+	Subtitle,
+	ImgWrapper,
+	Img,
+} from "./InfoSection-Elements";
 
-function InfoSection({ lightBg }) {
+function InfoSection({
+	lightBg,
+	imgStart,
+	lightTopLine,
+	lightTextDesc,
+	buttonLabel,
+	description,
+	headLine,
+	lightText,
+	primary,
+	topLine,
+	start,
+	img,
+	alt,
+}) {
 	return (
-		<div>
-			<InfoSec lightBg={lightBg}>Hi</InfoSec>
-		</div>
+		<InfoSec lightBg={lightBg}>
+			<Container>
+				<InfoRow imgStart={imgStart}>
+					<InfoColumn>
+						<TextWrapper>
+							<TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+							<Heading lightText={lightText}>{headLine}</Heading>
+							<Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+							<Link to="/sign-up">
+								<Button big fontBig primary={primary}>
+									{buttonLabel}
+								</Button>
+							</Link>
+						</TextWrapper>
+					</InfoColumn>
+					<InfoColumn>
+						<ImgWrapper start={start}>
+							<Img src={img} alt={alt}></Img>
+						</ImgWrapper>
+					</InfoColumn>
+				</InfoRow>
+			</Container>
+		</InfoSec>
 	);
 }
 

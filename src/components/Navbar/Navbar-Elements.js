@@ -74,26 +74,39 @@ export const NavItem = styled.li`
 	margin: 0 1.2rem;
 	font-size: 1.2rem;
 
-	&::before {
+	&::before,
+	&::after {
 		content: "";
 		position: absolute;
 		width: 0;
-		height: 0;
 		bottom: -20%;
-		background-color: #4b59f7;
+		background-color: white;
 		transition: all 500ms ease;
+		height: 3px;
 	}
 
-	&:hover::before {
-		width: 100%;
-		height: 3px;
+	&::before {
+		left: 50%;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	&::after {
+		right: 50%;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+
+	&:hover::before,
+	&:hover::after {
+		width: 50%;
 		transition: width 500ms ease;
 	}
 
 	@media screen and (max-width: 991px) {
 		width: 100%;
 
-		&::before {
+		&::before,
+		&::after {
 			display: none;
 		}
 	}
@@ -103,9 +116,10 @@ export const NavLink = styled(Link)`
 	text-decoration: none;
 	color: #fff;
 	height: 100%;
+	transition: all 500ms ease;
 
 	&:hover {
-		color: #b14ffbc4;
+		color: #0467fb;
 	}
 
 	@media screen and (max-width: 991px) {
