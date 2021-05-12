@@ -32,7 +32,7 @@ function InfoSection({
 		<InfoSec lightBg={lightBg}>
 			<Container>
 				<InfoRow imgStart={imgStart}>
-					<InfoColumn>
+					<InfoColumn data-aos="fade-down">
 						<TextWrapper>
 							<TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
 							<Heading lightText={lightText}>{headLine}</Heading>
@@ -44,7 +44,7 @@ function InfoSection({
 							</Link>
 						</TextWrapper>
 					</InfoColumn>
-					<InfoColumn>
+					<InfoColumn data-aos="zoom-in">
 						<ImgWrapper start={start}>
 							<Img src={img} alt={alt}></Img>
 						</ImgWrapper>
